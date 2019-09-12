@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="/public/styles/index.css" rel="stylesheet" >
+
+
+<style>
+    .nav{
+    background-color: orange;
+    overflow:auto;
+    margin: 0px, 0px ,0px, 0px;
+    }
+
+    .task_box{
+    margin-bottom: 3em;
+    margin-left: 4em;
+}
+
+.task_box li{
+    font-size: 3em;
+    color: white;
+}
+.nav_list li{
+    color: brown;
+    font-size: 2em;
+    float: left;
+    padding: 10px;
+    list-style-type:none; 
+    border-style: solid;
+    margin-right: 1em;
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+
+.outer_box{
+    margin:4em 4em 15em 4em;
+    border-style: solid;
+    background-color: red;
+}
+
+.inner_box{
+ padding-left: 100px;
+ padding-bottom: 100px;
+}
+
+input{
+    height: 3em;
+    width: 25em;
+    margin-bottom: 1em;
+
+}
+
+button{
+    height: 3em;
+    width: 25em;
+    
+}
+
+
+
+    </style>
+</head>
+<body>
+  
+    <div class="nav" onclick="change()">
+            <ul class="nav_list">
+                <li>Home</li>
+                <li>SignUp</li>
+                <li>Login</li>
+                <li>Events</li>
+                <li>Help</li>
+            </ul>
+    </div>
+
+  <script>
+      function change(){
+          let a = document.querySelector(".nav");
+        a.style.backgroundColor='white';
+      }
+      
+    
+
+  </script>
+
+
+<center>   <div class="outer_box">
+     <center><h1>To Do List</h1></center>  
+      <center>
+          
+        <div class="inner_box">
+           <input type="text" class="task" placeholder="Input your task here" name="task"> <br> 
+           <button onclick="add_task()" ><b>Add this task</b></button>
+       </div>
+
+       <div class="task_box">
+    
+       </div>
+      </center>
+   </div>
+</center>
+
+ <script>
+
+    let task_box = document.querySelector(".task_box");
+
+    task_box.addEventListener("mouseover",()=>{
+        task_box.style.backgroundColor='black';
+    })
+    task_box.addEventListener("mouseout",()=>{
+        task_box.style.backgroundColor='red';
+    })
+
+
+    
+    function add_task(){
+        let li= document.createElement("li");
+        let tk = document.querySelector(".task").value;
+        
+       let tknode= document.createTextNode(tk);
+        li.appendChild(tknode);
+
+        let adder = document.querySelector(".task_box");
+        //adder.style.backgroundColor ="white";
+        adder.appendChild(li);
+    }
+ 
+ </script>
+
+    
+</body>
+</html>

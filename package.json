@@ -1,0 +1,21 @@
+{
+  "name": "previne",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aditya singh rao",
+  "license": "ISC",
+  "dependencies": {
+    "dependencies": "0.0.1",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
